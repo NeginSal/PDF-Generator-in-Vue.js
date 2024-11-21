@@ -20,12 +20,14 @@
           </div>
         </div>
         <!-- Text Content -->
-        <div class="row p-2 border-bottom border-2 mb-3">
-          <div class="col-4">
-            <h6><span class="badge text-bg-secondary">Example heading</span></h6>
+        <div class="p-2 border-bottom border-2 mb-3">
+          <div class="d-flex justify-content-between align-items-center">
+            <div>
+              <h6><span class="badge text-bg-secondary">Example heading</span></h6>
+            </div>
+            <div>Submitted:10/26/2024</div>
+            <div>Report On:11/9/2024</div>
           </div>
-          <div class="col-4">Submitted:10/26/2024</div>
-          <div class="col-4">Report On:11/9/2024</div>
           <div class="mt-2">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident harum fuga soluta, beatae ratione sequi
             cum
