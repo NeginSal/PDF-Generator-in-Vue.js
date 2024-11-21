@@ -1,7 +1,7 @@
 <template>
   <div class="mt-5">
     <div ref="pdfContent">
-      
+
       <!-- Main Text Page -->
       <div class="page border border-black text-content">
         <!-- Header for the First Page -->
@@ -33,12 +33,14 @@
             modi!
           </div>
         </div>
-        <div class="row p-2 border-bottom border-2 mb-3">
-          <div class="col-4">
-            <h6><span class="badge text-bg-secondary">Example heading</span></h6>
+        <div class="p-2 border-bottom border-2 mb-3">
+          <div class="d-flex justify-content-between align-items-center">
+            <div>
+              <h6><span class="badge text-bg-secondary">Example heading</span></h6>
+            </div>
+            <div></div>
+            <div></div>
           </div>
-          <div class="col-4"></div>
-          <div class="col-4"></div>
           <div class="mt-2">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident harum fuga soluta, beatae ratione sequi
             cum
@@ -46,12 +48,14 @@
             modi!
           </div>
         </div>
-        <div class="row p-2 mb-3">
-          <div class="col-4">
-            <h6><span class="badge text-bg-secondary">Example heading</span></h6>
+        <div class="p-2 mb-3">
+          <div class="d-flex justify-content-between align-items-center">
+            <div>
+              <h6><span class="badge text-bg-secondary">Example heading</span></h6>
+            </div>
+            <div></div>
+            <div></div>
           </div>
-          <div class="col-4"></div>
-          <div class="col-4"></div>
           <div class="my-3">
             <p class="fw-bold">Findings</p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident harum fuga soluta, beatae ratione sequi
@@ -129,7 +133,7 @@
 
       <!-- Signature Page -->
       <div v-if="showSignaturePage" class="page border border-black">
-        <div class="row border-bottom mt-auto pb-2">
+        <div class="border-bottom mt-auto pb-2">
           <p class="fw-bold">Signature</p>
           <div class="d-flex justify-content-evenly align-items-center">
             <div class="text-end">
@@ -227,6 +231,7 @@ export default {
         image: { type: "jpeg", quality: 0.8 }, // Adjust quality for size
         html2canvas: { scale: 2, useCORS: true },
         jsPDF: { unit: "in", format: "a4", orientation: "portrait" },
+        pagebreak: { mode: ['avoid-all', 'css', 'legacy'] } // Ensure proper page breaking
         // pagebreak: { mode: ['avoid-all', 'css', 'legacy'] }
         // pagebreak: { after: '.page', avoid: 'img' }
       };
@@ -250,25 +255,18 @@ export default {
 </script>
 
 <style scoped>
-/* .page {
-  position: relative;
-  page-break-after: always;
-  // A4 width minus margins 
-  width: 8.07in;
-  height: 11.39in;
-} */
-
 .text-content {
   font-size: 12px;
 }
 
-/* .footer {
-  position: absolute;
-  width: 100%;
-} */
-
 .logo {
   width: 200px;
   height: 200px;
+}
+
+.image-frame {
+  height: 200px;
+  object-fit: cover;
+  width: 100%;
 }
 </style>
