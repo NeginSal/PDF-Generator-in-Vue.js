@@ -1,99 +1,113 @@
 <template>
-  <div class="mt-5">
+  <div class="d-flex flex-column justify-content-center align-items-center mt-5">
     <div ref="pdfContent">
 
       <!-- Main Text Page -->
-      <div class="page border border-black text-content">
-        <!-- Header for the First Page -->
-        <div v-if="showHeaderOnFirstPage" class="d-flex justify-content-evenly align-items-center border-bottom">
-          <div class="text-center">
-            <p class="fw-bold">Report Requested By</p>
-            <p class="">Sandy Lane Pet Clinic</p>
-            <p class="">Dr. Lee</p>
-          </div>
-          <div class="text-center">
-            <img src="../assets/company.svg" alt="Company Logo" class="rounded logo" />
-          </div>
-          <div class="text-center">
-            <p class="fw-bold">Report Provided By</p>
-            <p class="">CompanyName@gmail.com</p>
-          </div>
-        </div>
-        <!-- Text Content -->
-        <div class="p-2 border-bottom border-2 mb-3">
-          <div class="d-flex justify-content-between align-items-center">
-            <div>
-              <h6><span class="badge text-bg-secondary">Example heading</span></h6>
+      <div class="page d-flex flex-column justify-content-between">
+        <div>
+          <!-- Header for the First Page -->
+          <div v-if="showHeaderOnFirstPage" class="d-flex justify-content-evenly border-bottom pt-2">
+            <div class="text-center">
+              <p class="fw-bold">Report Requested By</p>
+              <p class="">Sandy Lane Pet Clinic</p>
+              <p class="">Dr. Lee</p>
             </div>
-            <div>Submitted:10/26/2024</div>
-            <div>Report On:11/9/2024</div>
-          </div>
-          <div class="mt-2">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident harum fuga soluta, beatae ratione sequi
-            cum
-            dolorem fugit nam natus architecto dolor molestias tempora officiis perspiciatis aspernatur ipsam aliquid
-            modi!
-          </div>
-        </div>
-        <div class="p-2 border-bottom border-2 mb-3">
-          <div class="d-flex justify-content-between align-items-center">
-            <div>
-              <h6><span class="badge text-bg-secondary">Example heading</span></h6>
+            <div class="text-center">
+              <img src="../assets/company.svg" alt="Company Logo" class="rounded logo" />
             </div>
-            <div></div>
-            <div></div>
-          </div>
-          <div class="mt-2">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident harum fuga soluta, beatae ratione sequi
-            cum
-            dolorem fugit nam natus architecto dolor molestias tempora officiis perspiciatis aspernatur ipsam aliquid
-            modi!
-          </div>
-        </div>
-        <div class="p-2 mb-3">
-          <div class="d-flex justify-content-between align-items-center">
-            <div>
-              <h6><span class="badge text-bg-secondary">Example heading</span></h6>
+            <div class="text-center">
+              <p class="fw-bold">Report Provided By</p>
+              <p class="">CompanyName@gmail.com</p>
             </div>
-            <div></div>
-            <div></div>
           </div>
-          <div class="my-3">
-            <p class="fw-bold">Findings</p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident harum fuga soluta, beatae ratione sequi
-            cum
-            dolorem fugit nam natus architecto dolor molestias tempora officiis perspiciatis aspernatur ipsam aliquid
-            modi!
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque ab debitis consequatur perspiciatis
-            laboriosam illum
-            accusamus? Rem nisi numquam harum, earum voluptate tenetur accusantium amet nihil facilis recusandae
-            voluptates dicta.
-          </div>
-          <div class="my-3">
-            <p class="fw-bold">Interpretation</p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident harum fuga soluta, beatae ratione sequi
-            cum
-            dolorem fugit nam natus architecto dolor molestias tempora officiis perspiciatis aspernatur ipsam aliquid
-            modi!
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque ab debitis consequatur perspiciatis
-            laboriosam illum
-            accusamus? Rem nisi numquam harum, earum voluptate tenetur accusantium amet nihil facilis recusandae
-            voluptates dicta.
-          </div>
-          <div class="my-3">
-            <p class="fw-bold">Recommendations</p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident harum fuga soluta, beatae ratione sequi
-            cum
-            dolorem fugit nam natus architecto dolor molestias tempora officiis perspiciatis aspernatur ipsam aliquid
-            modi!
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque ab debitis consequatur perspiciatis
-            laboriosam illum
-            accusamus? Rem nisi numquam harum, earum voluptate tenetur accusantium amet nihil facilis recusandae
-            voluptates dicta.
+          <!-- Text Content -->
+          <div class="text-content">
+            <div class="p-2 border-bottom border-2 mb-3">
+              <div class="d-flex justify-content-between align-items-center">
+                <div>
+                  <h6><span class="badge text-bg-secondary">Example heading</span></h6>
+                </div>
+                <div>Submitted:10/26/2024</div>
+                <div>Report On:11/9/2024</div>
+              </div>
+              <div class="mt-2">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident harum fuga soluta, beatae ratione
+                sequi
+                cum
+                dolorem fugit nam natus architecto dolor molestias tempora officiis perspiciatis aspernatur ipsam
+                aliquid
+                modi!
+              </div>
+            </div>
+            <div class="p-2 border-bottom border-2 mb-3">
+              <div class="d-flex justify-content-between align-items-center">
+                <div>
+                  <h6><span class="badge text-bg-secondary">Example heading</span></h6>
+                </div>
+                <div></div>
+                <div></div>
+              </div>
+              <div class="mt-2">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident harum fuga soluta, beatae ratione
+                sequi
+                cum
+                dolorem fugit nam natus architecto dolor molestias tempora officiis perspiciatis aspernatur ipsam
+                aliquid
+                modi!
+              </div>
+            </div>
+            <div class="p-2 mb-3">
+              <div class="d-flex justify-content-between align-items-center">
+                <div>
+                  <h6><span class="badge text-bg-secondary">Example heading</span></h6>
+                </div>
+                <div></div>
+                <div></div>
+              </div>
+              <div class="my-3">
+                <p class="fw-bold">Findings</p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident harum fuga soluta, beatae ratione
+                sequi
+                cum
+                dolorem fugit nam natus architecto dolor molestias tempora officiis perspiciatis aspernatur ipsam
+                aliquid
+                modi!
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque ab debitis consequatur perspiciatis
+                laboriosam illum
+                accusamus? Rem nisi numquam harum, earum voluptate tenetur accusantium amet nihil facilis recusandae
+                voluptates dicta.
+              </div>
+              <div class="my-3">
+                <p class="fw-bold">Interpretation</p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident harum fuga soluta, beatae ratione
+                sequi
+                cum
+                dolorem fugit nam natus architecto dolor molestias tempora officiis perspiciatis aspernatur ipsam
+                aliquid
+                modi!
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque ab debitis consequatur perspiciatis
+                laboriosam illum
+                accusamus? Rem nisi numquam harum, earum voluptate tenetur accusantium amet nihil facilis recusandae
+                voluptates dicta.
+              </div>
+              <div class="my-3">
+                <p class="fw-bold">Recommendations</p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident harum fuga soluta, beatae ratione
+                sequi
+                cum
+                dolorem fugit nam natus architecto dolor molestias tempora officiis perspiciatis aspernatur ipsam
+                aliquid
+                modi!
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque ab debitis consequatur perspiciatis
+                laboriosam illum
+                accusamus? Rem nisi numquam harum, earum voluptate tenetur accusantium amet nihil facilis recusandae
+                voluptates dicta.
+              </div>
+            </div>
           </div>
         </div>
         <!-- Footer For First Page -->
-        <div class="d-flex justify-content-evenly align-items-center mt-auto">
+        <div class="d-flex justify-content-evenly align-items-center">
           <div class="text-center">
             <span class="text-secondary">Page 1 of {{ totalPages }}</span>
           </div>
@@ -108,7 +122,8 @@
       </div>
 
       <!-- Image Pages -->
-      <div v-for="(page, pageIndex) in imagePages" :key="pageIndex" class="page border border-black">
+      <div v-for="(page, pageIndex) in imagePages" :key="pageIndex"
+        class="page d-flex flex-column justify-content-between">
         <div class="row">
           <div v-for="(image, index) in page" :key="index" class="col-6 mb-2">
             <!-- <img :src="image.download_url" class="img-fluid" alt="Image"  style="height: auto; max-width: 100%;" /> -->
@@ -119,7 +134,7 @@
         </div>
 
         <!-- Footer for Image Pages -->
-        <div class="d-flex justify-content-evenly align-items-center p-1 mt-auto">
+        <div class="d-flex justify-content-evenly align-items-center">
           <div class="text-center">
             <span class="text-secondary">Page {{ pageIndex + 2 }} of {{ totalPages }}</span>
           </div>
@@ -134,10 +149,10 @@
       </div>
 
       <!-- Signature Page -->
-      <div v-if="showSignaturePage" class="page border border-black">
-        <div class="border-bottom mt-auto pb-2">
+      <div v-if="showSignaturePage" class="page d-flex flex-column justify-content-between">
+        <div class="border-bottom p-2 mt-auto">
           <p class="fw-bold">Signature</p>
-          <div class="d-flex justify-content-evenly align-items-center">
+          <div class="d-flex justify-content-between align-items-center">
             <div class="text-end">
               <img src="../assets/company.svg" alt="Company Logo" class="logo" />
             </div>
@@ -163,7 +178,7 @@
         </div>
 
         <!-- Footer for Signature Page -->
-        <div class="d-flex justify-content-evenly align-items-center p-1">
+        <div class="d-flex justify-content-evenly align-items-center">
           <div class="text-center">
             <span class="text-secondary">Page {{ totalPages }} of {{ totalPages }}</span>
           </div>
@@ -228,11 +243,12 @@ export default {
     const generatePdf = () => {
       const element = pdfContent.value;
       const options = {
-        margin: 0.1,
+        // margin: 0.1,
         filename: "report.pdf",
         image: { type: "jpeg", quality: 0.8 }, // Adjust quality for size
         html2canvas: { scale: 2, useCORS: true },
-        jsPDF: { unit: "in", format: "a4", orientation: "portrait" },
+        // jsPDF: { unit: "in", format: "a4", orientation: "portrait" },
+        jsPDF: { unit: "mm", format: "a4", orientation: "portrait" },
         pagebreak: { mode: ['avoid-all', 'css', 'legacy'] } // Ensure proper page breaking
         // pagebreak: { mode: ['avoid-all', 'css', 'legacy'] }
         // pagebreak: { after: '.page', avoid: 'img' }
@@ -257,13 +273,26 @@ export default {
 </script>
 
 <style scoped>
+.page {
+  /* width: 8.27in; */
+  /* height: 11.69in; */
+  /* width: 210mm;
+  height: 297mm; */
+  width: 206.83mm;
+  height: 293.83mm;
+  margin: 5px;
+  /* margin: auto; */
+  background-color: #ffffff;
+  border: 1px solid black;
+}
+
 .text-content {
   font-size: 12px;
 }
 
 .logo {
-  width: 200px;
-  height: 200px;
+  width: 150px;
+  height: 150px;
 }
 
 .image-frame {
